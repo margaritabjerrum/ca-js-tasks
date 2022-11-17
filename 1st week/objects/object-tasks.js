@@ -80,7 +80,7 @@ console.groupCollapsed('3 - https://edabit.com/challenge/48EJWLhF224na8po3');
   
   generation(1, "f"); // ➞ "daughter"
 
-  generation(0, 'f'); // ➞ "Me!"
+  generation(0, 'f'); // ➞ "Me! "
 }
 console.groupEnd();
 
