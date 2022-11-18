@@ -22,10 +22,6 @@ console.groupCollapsed('1 - https://edabit.com/challenge/nuXdWHAoHv9y38sn7');
   }
   
   drinks.sort(sortDrinkByPrice);
-  
-  drinks.forEach((e) => {
-    console.log(`${e.name} ${e.price}`);
-  });
 
   console.log(drinks.sort(sortDrinkByPrice));
 }
@@ -80,7 +76,7 @@ console.groupCollapsed('3 - https://edabit.com/challenge/48EJWLhF224na8po3');
   
   generation(1, "f"); // ➞ "daughter"
 
-  generation(0, 'f'); // ➞ "Me! "
+  generation(0, 'f'); // ➞ "Me!"
 }
 console.groupEnd();
 
@@ -93,46 +89,9 @@ console.groupCollapsed('4 - https://edabit.com/challenge/i6YqzHcSiPiEQKjeX');
       maxPossibleScore = maxPossibleScore + tileHand[i].score;
     };
 
-    console.log('maxPossibleScore:', maxPossibleScore);
+    console.log('Max Possible Score:', maxPossibleScore);
   
   }
-  
-  maximumScore([
-    { tile: "N", score: 1 },
-    { tile: "K", score: 5 },
-    { tile: "Z", score: 10 },
-    { tile: "X", score: 8 },
-    { tile: "D", score: 2 },
-    { tile: "A", score: 1 },
-    { tile: "E", score: 1 }
-  ]);
-  
-  maximumScore([
-    { tile: "B", score: 2 },
-    { tile: "V", score: 4 },
-    { tile: "F", score: 4 },
-    { tile: "U", score: 1 },
-    { tile: "D", score: 2 },
-    { tile: "O", score: 1 },
-    { tile: "U", score: 1 }
-  ]);
-}
-
-{
-  function maximumScore(tileHand) {
-    const score1 = tileHand[0].score;
-    const score2 = tileHand[1].score;
-    const score3 = tileHand[2].score;
-    const score4 = tileHand[3].score;
-    const score5 = tileHand[4].score;
-    const score6 = tileHand[5].score;
-    const score7 = tileHand[6].score;
-  
-    const maxScore = score1 + score2 + score3 + score4 + score5 + score6 + score7
-  
-   console.log('maxScore:', maxScore);
-  
-  }  
   
   maximumScore([
     { tile: "N", score: 1 },
@@ -170,7 +129,7 @@ console.groupCollapsed('5 - https://edabit.com/challenge/8s2jy9hR2TAeQinKD');
   
     let whatNeedsToBeRepaid = totalObjDamage - valueToSubtract
   
-    console.log(whatNeedsToBeRepaid);
+    console.log('How Much Needs To Be Repaid:', whatNeedsToBeRepaid);
   
   }
   
@@ -186,18 +145,79 @@ console.groupEnd();
 
 console.groupCollapsed('6 - https://edabit.com/challenge/pPNAs5PvB3WvnDwDM');
 {
+  function toArray(obj) {
 
+    console.log(Object.entries(obj));
+    return Object.entries(obj);
+  }
+
+  toArray({ a: 1, b: 2 }); // ➞ [["a", 1], ["b", 2]]
+
+  toArray({ shrimp: 15, tots: 12 }); // ➞ [["shrimp", 15], ["tots", 12]]
+
+  toArray({}); // ➞ []
 }
 console.groupEnd();
 
 console.groupCollapsed('7 - https://edabit.com/challenge/QXWM2oo7rQNiyDsip');
 {
+  function inkLevels(inks) {
+    let inkMaxPages = Object.values(inks);
+    let min = Math.min(...inkMaxPages);
 
+    console.log('Max pages that can be printed:', min);
+  }
+
+  inkLevels({
+    "cyan": 23,
+    "magenta": 12,
+    "yellow": 10
+  })// ➞ 10
+  
+  inkLevels({
+    "cyan": 432,
+    "magenta": 543,
+    "yellow": 777
+  }) // ➞ 432
+  
+  inkLevels({
+    "cyan": 700,
+    "magenta": 700,
+    "yellow": 0
+  }) // ➞ 0
 }
 console.groupEnd();
 
 console.groupCollapsed('8 - https://edabit.com/challenge/pLNavsePxJ87t9Nak');
 {
+
+  function calculateLosses(obj) {
+    let valueArray = Object.values(obj);
+
+    let totalValueOfStolenItems = 0;
+
+    for (let i = 0; i < valueArray.length; i += 1) {
+      totalValueOfStolenItems = totalValueOfStolenItems + valueArray[i];
+    }
+
+    if (totalValueOfStolenItems > 0) {
+      console.log('Total Value Of Stolen Items:', totalValueOfStolenItems);
+    } else {
+      console.log('Lucky you!')
+    }
+  }
+  
+  calculateLosses({
+    tv: 30,
+    skate: 20,
+    stereo: 50,
+  }); // ➞ 100
+  
+  calculateLosses ({
+    painting: 20000,
+  }); // ➞ 20000
+  
+  calculateLosses ({}); // ➞ "Lucky you!"
 
 }
 console.groupEnd();
