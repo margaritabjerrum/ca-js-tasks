@@ -227,18 +227,26 @@ console.log();
 console.group('11. Suapvalinti visas masyvo reikšmes iki sveikų skaičių ir išsaugoti naujame masyve');
 console.log('---');
 {
-  function absArrElements(arr) {
+  function round(arr) {
     const result = [];
     for (let i = 0; i < arr.length; i += 1) {
-      result[i] = (arr[i] | 0);
-      }
+      let element = arr[i];
       
-    return result;
+      const remainder = element % 1;
+      const whole = element - remainder;
+  
+      if (remainder <= -0.5) result.push(whole - 1);
+          else if (remainder >= 0.5) result.push(whole + 1);
+            
+          result.push(whole);
+      }
+  
+    return result;  
   }
-
+  
   console.log({
     numbers,
-    result: absArrElements(numbers)
+    result: round(numbers)
   });
 }
 console.log('---');
