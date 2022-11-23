@@ -220,7 +220,17 @@ console.groupEnd();
 
 console.groupCollapsed('12. Suformuokite žmonių masyvą iš objektų, kuriuose nebūtų lyties, vardo ir pavardės');
 {
-  // ...sprendimas ir spausdinimas
+  function createArrayWithAnonymousPeopleAndNoSex(person) {
+    return {
+      age: person.age,
+      income: person.income,
+      married: person.married,
+      hasCar: person.hasCar
+    }
+  }
+
+  const anonymousPeopleAndNoSex = people.map(createArrayWithAnonymousPeopleAndNoSex);
+  console.table(anonymousPeopleAndNoSex);
 }
 console.groupEnd();
 
