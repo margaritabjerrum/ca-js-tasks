@@ -133,7 +133,17 @@ console.groupEnd();
 
 console.groupCollapsed('5. Sukurtite masyvą su vardais, pavardėmis ir lytimi, pagal pradinį žmonių masyvą');
 {
-  // ...sprendimas ir spausdinimas
+  function createArrayWithNameSurnameAndSex(person) {
+    return {
+      name : person.name,
+      surname : person.surname,
+      sex : person.sex      
+    }
+  }
+
+  const arrayWithNameSurnameAndSex = people.map(createArrayWithNameSurnameAndSex);
+
+  console.table(arrayWithNameSurnameAndSex);
 }
 console.groupEnd();
 
