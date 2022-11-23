@@ -142,13 +142,16 @@ console.log();
 console.group('9. Pakelti visas masyvo reikšmes laipsniu \'index\' ir išsaugoti naujame masyve');
 console.log('---');
 {
-  function powArrElementsByIndex(arr) {
-    // Jūsų kodas
+  function powArrElementsByIndex(number, i) {
+    return number ** i;
   }
-  // console.log({
-  //   numbers,
-  //   result: powArrElementsByIndex(numbers)
-  // });
+
+  const numberPowerByIndex = numbers.map(powArrElementsByIndex);
+
+  console.log({
+    numbers,
+    result: numberPowerByIndex
+  });
 }
 console.log('---');
 console.groupEnd();
