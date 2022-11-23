@@ -4,12 +4,15 @@ const numbers = [1, 2, -2, 6, -5, 9, 1.02, 45, -69, 77, -12, 2, 8, -2, -4, 59, 7
 console.group('1. Padauginti masyvo narius iš 2 ir išsaugoti naujame masyve');
 console.log('---');
 {
-  function mulArrBy2(arr) {
-    // ... code
+  function mulArrBy2(number) {
+    return number * 2;
   }
+
+  const doubleNumber = numbers.map(mulArrBy2);
+
   console.log({
     numbers,
-    result: mulArrBy2(numbers)
+    result: doubleNumber
   });
 }
 console.log('---');
