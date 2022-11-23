@@ -214,7 +214,20 @@ console.groupEnd();
 
 console.groupCollapsed('11. Performuokite žmonių masyvą, jog kiekvieno žmogaus savybė "income", taptų "salary"');
 {
-  // ...sprendimas ir spausdinimas
+  function changeIncomeToSalary(person) {
+    return {
+      name : person.name,
+      surname : person.surname,
+      sex : person.sex,
+      age: person.age,
+      salary: person.income,
+      married: person.married,
+      hasCar: person.hasCar
+    }
+  }
+
+  const incomeReplacedWithSalary = people.map(changeIncomeToSalary);
+  console.table(incomeReplacedWithSalary);
 }
 console.groupEnd();
 
