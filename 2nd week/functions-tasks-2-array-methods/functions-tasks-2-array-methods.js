@@ -40,12 +40,15 @@ console.log();
 console.group('3. Padauginti masyvo narius iš jų index\'o (vietos masyve) ir išsaugoti naujame masyve');
 console.log('---');
 {
-  function mulArrElementsByIndex(arr) {
-    // ... code
+  function mulArrBy2(number, i) {
+    return number * i;
   }
+
+  const numberMultipliedByIndex = numbers.map(mulArrBy2);
+
   console.log({
     numbers,
-    result: mulArrElementsByIndex(numbers)
+    result: numberMultipliedByIndex
   });
 }
 console.log('---');
