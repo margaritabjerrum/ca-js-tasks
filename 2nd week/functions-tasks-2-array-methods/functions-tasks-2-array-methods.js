@@ -22,12 +22,15 @@ console.log();
 console.group('2. Pakelti masyvo narius kvadratu ir išsaugoti naujame masyve');
 console.log('---');
 {
-  function powerArrBy2(arr) {
-    // ... code
+  function mulArrBy2(number) {
+    return number ** 2;
   }
+
+  const powerOf2Number = numbers.map(mulArrBy2);
+
   console.log({
     numbers,
-    result: powerArrBy2(numbers)
+    result: powerOf2Number
   });
 }
 console.log('---');
