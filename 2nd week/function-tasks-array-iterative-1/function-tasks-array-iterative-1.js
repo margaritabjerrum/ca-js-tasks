@@ -174,8 +174,23 @@ console.groupEnd();
 
 console.groupCollapsed('8. Atspausdinkite žmonių vardus ir pavardes, kurie turi mašinas');
 {
-  // ...sprendimas ir spausdinimas
+  function selectAllPeopleThatHasCar(person) {
+
+    return person.hasCar;
+  }
+
+  const allPeopleThatHasCar = people.filter(selectAllPeopleThatHasCar);
+
+  function printFullnameOfPeopleThatHasCar(person){
+    return {
+     fullname : `${person.name} ${person.surname}`
+    }
+  }
+
+  const fullnameOfPeopleThatHasCar = allPeopleThatHasCar.map(printFullnameOfPeopleThatHasCar);
+  console.table(fullnameOfPeopleThatHasCar);
 }
+
 console.groupEnd();
 
 console.groupCollapsed('9. Atspausdinkite žmones kurie yra susituokę');
