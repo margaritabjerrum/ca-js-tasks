@@ -162,7 +162,13 @@ console.groupEnd();
 
 console.groupCollapsed('7. Atspausdinkite visas moteris');
 {
-  // ...sprendimas ir spausdinimas
+  function printAllFemale(person) {
+    return person.sex === 'female';
+  }
+
+  const allFemale = people.filter(printAllFemale);
+
+  console.table(allFemale);
 }
 console.groupEnd();
 
