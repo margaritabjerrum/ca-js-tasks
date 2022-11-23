@@ -75,13 +75,15 @@ console.log();
 console.group('5. Atrinkti tiktai neigiamų elementų masyvą');
 console.log('---');
 {
-  function filterNegatives(arr) {
-    // Jūsų kodas
+  function filterNegatives(number) {
+    return number < 0;
   }
-  // console.log({
-  //   numbers,
-  //   result: filterNegatives(numbers)
-  // });
+
+  const negativeNumbers = numbers.filter(filterNegatives);
+  console.log({
+    numbers,
+    result: negativeNumbers
+  });
 }
 console.log('---');
 console.groupEnd();
