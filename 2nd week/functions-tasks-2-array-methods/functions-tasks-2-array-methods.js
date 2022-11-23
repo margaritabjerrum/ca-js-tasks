@@ -92,13 +92,15 @@ console.log();
 console.group('6. Atrinkti tiktai lyginių skaičių masyvą');
 console.log('---');
 {
-  function filterEquals(arr) {
-    // Jūsų kodas
+  function filterEquals(number) {
+    return number % 2 === 0;
   }
-  // console.log({
-  //   numbers,
-  //   result: filterEquals(numbers)
-  // });
+
+  const equalNumbers = numbers.filter(filterEquals);
+  console.log({
+    numbers,
+    result: equalNumbers
+  });
 }
 console.log('---');
 console.groupEnd();
