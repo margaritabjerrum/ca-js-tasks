@@ -160,13 +160,16 @@ console.log();
 console.group('10. Atrinkti tik natūralių skaičių masyvą');
 console.log('---');
 {
-  function filterNaturals(arr) {
-    // Jūsų kodas
+  function filterNaturals(number) {
+    return number > 0 && (number % 2 === 0 || number % 2 === 1)
   }
-  // console.log({
-  //   numbers,
-  //   result: filterNaturals(numbers)
-  // });
+
+  const naturalNumbers = numbers.filter(filterNaturals);
+
+  console.log({
+    numbers,
+    result: naturalNumbers
+  });
 }
 console.log('---');
 console.groupEnd();
