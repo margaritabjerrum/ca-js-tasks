@@ -208,8 +208,14 @@ console.groupEnd();
 
 console.groupCollapsed('10. Sukurkite objektą, kuriame būtų apskaičiuotas vairuojančių žmonių kiekis pagal lytį');
 {
-  // ...sprendimas ir spausdinimas
-}
+  function filterDrivingFemale(person) {
+    return person.sex === 'female' && person.hasCar;
+  }
+
+  const femaleThatDrives = people.filter(filterDrivingFemale);
+
+  console.table(`{female : ${femaleThatDrives.length}}`);
+}  
 console.groupEnd();
 
 console.groupCollapsed('11. Performuokite žmonių masyvą, jog kiekvieno žmogaus savybė "income", taptų "salary"');
