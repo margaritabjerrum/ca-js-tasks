@@ -58,13 +58,15 @@ console.log();
 console.group('4. Atrinkti tiktai teigimų elementų masyvą');
 console.log('---');
 {
-  function filterPositives(arr) {
-    // Jūsų kodas
+  function filterPositives(number) {
+    return number > 0;
   }
-  // console.log({
-  //   numbers,
-  //   result: filterPositives(numbers)
-  // });
+
+  const positiveNumbers = numbers.filter(filterPositives);
+  console.log({
+    numbers,
+    result: positiveNumbers
+  });
 }
 console.log('---');
 console.groupEnd();
