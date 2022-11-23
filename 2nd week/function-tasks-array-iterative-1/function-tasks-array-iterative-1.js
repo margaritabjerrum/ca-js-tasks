@@ -149,7 +149,14 @@ console.groupEnd();
 
 console.groupCollapsed('6. Atspausdinkite visus vyrus');
 {
-  // ...sprendimas ir spausdinimas
+  function printAllMale(person) {
+    return person.sex === 'male';
+  }
+
+  const allMale = people.filter(printAllMale);
+
+  console.table(allMale);
+
 }
 console.groupEnd();
 
