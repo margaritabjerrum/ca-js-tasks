@@ -117,7 +117,17 @@ console.groupEnd();
 
 console.groupCollapsed('4. Sukurtite masyvą su lytimis ir uždirbamu pinigų kiekiu, pagal pradinį žmonių masyvą');
 {
-  // ...sprendimas ir spausdinimas
+  function createArrayWithSexAndIncome(person) {
+    return {
+      sex : person.sex,
+      income : person.income
+    }
+  }
+
+  const arrayWithSexAndIncome = people.map(createArrayWithSexAndIncome);
+
+  console.table(arrayWithSexAndIncome);
+
 }
 console.groupEnd();
 
