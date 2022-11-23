@@ -22,11 +22,11 @@ console.log();
 console.group('2. Pakelti masyvo narius kvadratu ir išsaugoti naujame masyve');
 console.log('---');
 {
-  function mulArrBy2(number) {
+  function powerArrBy2(number) {
     return number ** 2;
   }
 
-  const powerOf2Number = numbers.map(mulArrBy2);
+  const powerOf2Number = numbers.map(powerArrBy2);
 
   console.log({
     numbers,
@@ -40,11 +40,11 @@ console.log();
 console.group('3. Padauginti masyvo narius iš jų index\'o (vietos masyve) ir išsaugoti naujame masyve');
 console.log('---');
 {
-  function mulArrBy2(number, i) {
+  function mulArrElementsByIndex(number, i) {
     return number * i;
   }
 
-  const numberMultipliedByIndex = numbers.map(mulArrBy2);
+  const numberMultipliedByIndex = numbers.map(mulArrElementsByIndex);
 
   console.log({
     numbers,
