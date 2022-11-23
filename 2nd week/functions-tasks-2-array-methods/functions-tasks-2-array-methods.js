@@ -109,13 +109,15 @@ console.log();
 console.group('7. Atrinkti tiktai nelyginių skaičių masyvą');
 console.log('---');
 {
-  function filterOdds(arr) {
-    // Jūsų kodas
+  function filterOdds(number) {
+    return number % 2 === 1 || number % 2 === -1;
   }
-  // console.log({
-  //   numbers,
-  //   result: filterOdds(numbers)
-  // });
+
+  const oddNumbers = numbers.filter(filterOdds);
+  console.log({
+    numbers,
+    result: oddNumbers
+  });
 }
 console.log('---');
 console.groupEnd();
@@ -123,17 +125,17 @@ console.log();
 
 console.group("8. Visas neigiamas vertes masyve padaryti teigiamomis ir išsaugoti į naują masyvą");
 {
-  function arrAbsoluteValues(arr) {
-    // ... code
+  function arrAbsoluteValues(number) {
+    return number = number > 0 ? number : number * -1;
   }
 
-  console.log('---');
+  const noNegativeNumbers = numbers.map(arrAbsoluteValues);
   console.log({
     numbers,
-    result: arrAbsoluteValues(numbers)
+    result: noNegativeNumbers
   });
-  console.log('---');
 }
+console.log('---');
 console.groupEnd();
 console.log();
 
