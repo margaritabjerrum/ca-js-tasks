@@ -188,6 +188,7 @@ console.groupCollapsed('8. Atspausdinkite žmonių vardus ir pavardes, kurie tur
   }
 
   const fullnameOfPeopleThatHasCar = allPeopleThatHasCar.map(printFullnameOfPeopleThatHasCar);
+  
   console.table(fullnameOfPeopleThatHasCar);
 }
 
@@ -195,7 +196,13 @@ console.groupEnd();
 
 console.groupCollapsed('9. Atspausdinkite žmones kurie yra susituokę');
 {
-  // ...sprendimas ir spausdinimas
+  function printAllMarried(person) {
+    return person.married;
+  }
+
+  const allMarried = people.filter(printAllMarried);
+
+  console.table(allMarried);
 }
 console.groupEnd();
 
