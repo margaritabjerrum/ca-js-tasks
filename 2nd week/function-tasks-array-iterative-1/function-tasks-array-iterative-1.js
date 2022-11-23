@@ -188,7 +188,7 @@ console.groupCollapsed('8. Atspausdinkite žmonių vardus ir pavardes, kurie tur
   }
 
   const fullnameOfPeopleThatHasCar = allPeopleThatHasCar.map(printFullnameOfPeopleThatHasCar);
-  
+
   console.table(fullnameOfPeopleThatHasCar);
 }
 
@@ -226,6 +226,19 @@ console.groupEnd();
 
 console.groupCollapsed('13. Suformuokite žmonių masyvą  iš objektų, kuriuose "name" ir "surname" savybės, būtų pakeistos "fullname" savybe');
 {
-  // ...sprendimas ir spausdinimas
+  function replacePersonCredentialsToFullname(person) {
+    return {
+      fullname: `${person.name} ${person.surname}`,
+      sex: person.sex,
+      age: person.age,
+      income: person.income,
+      married: person.married,
+      hasCar: person.hasCar
+    }
+  }
+
+  const formattedPeople = people.map(replacePersonCredentialsToFullname);
+  console.table(formattedPeople);
 }
+
 console.groupEnd();
