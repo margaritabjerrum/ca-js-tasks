@@ -178,13 +178,23 @@ console.log();
 console.group('11. Suapvalinti visas masyvo reikšmes iki sveikų skaičių ir išsaugoti naujame masyve');
 console.log('---');
 {
-  function absArrElements(arr) {
-    // Jūsų kodas
+  function absArrElements(number) {
+    const remainder = number % 1;
+    const whole = number - remainder;
+
+    if (remainder <= -0.5) return whole - 1;
+    else if (remainder >= 0.5) return whole + 1;
+      
+    return whole;
   }
-  // console.log({
-  //   numbers,
-  //   result: absArrElements(numbers)
-  // });
+
+  const wholeNumbers = numbers.map(absArrElements);
+
+  console.log({
+    numbers,
+    result: wholeNumbers
+  });
+ 
 }
 console.log('---');
 console.groupEnd()
