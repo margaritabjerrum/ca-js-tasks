@@ -192,13 +192,16 @@ console.groupEnd()
 console.group('12. Atrinkti kas antrą elementą');
 console.log('---');
 {
-  function filterEverySecond(arr) {
-    //  Jūsų kodas
+  function filterEverySecondElement(_, i) {
+    return i % 2 === 0;
   }
-  // console.log({
-  //   numbers,
-  //   result: filterEverySecond(numbers)
-  // });
+
+  const everySecondElement = numbers.filter(filterEverySecondElement);
+
+  console.log({
+    numbers,
+    result: everySecondElement
+  });
 }
 console.log('---');
 console.groupEnd();
@@ -206,13 +209,16 @@ console.groupEnd();
 console.group('13. Atrinkti kas penktą elementą');
 console.log('---');
 {
-  function filterEveryFifth(arr) {
-    //  Jūsų kodas
+  function filterEveryFifth(_, i) {
+    return i === 0 || i % 5 === 0;
   }
-  // console.log({
-  //   numbers,
-  //   result: filterEveryFifth(numbers)
-  // });
+
+  const everySecondFifth = numbers.filter(filterEveryFifth);
+  
+  console.log({
+    numbers,
+    result: everySecondFifth
+  });
 }
 console.log('---');
 console.groupEnd();
@@ -221,10 +227,12 @@ console.groupEnd();
 console.group('14. Sukurti funkciją, kuri ima masyvą ir atspausdina kiekvieną jo reikšmę atskirai: [0] => 64. (nieko negrąžina)');
 console.log('---');
 {
-  function printArr(arr) {
-    // ... code
+  function printArr(number, i) {
+    console.log (`[${i}] => ${number}`);
   }
-  printArr(numbers);
+  numbers.map(printArr);
+ 
+  console.log({numbers});
 }
 console.log('---');
 console.groupEnd();
@@ -232,14 +240,16 @@ console.groupEnd();
 console.group('15. Sukurti funkciją, kuri ima masyvą ir grąžina visų elementų sumą');
 console.log('---');
 {
-  function sumArr(arr) {
-    // Jūsų kodas
+  function sumArrReducer(prevSum, number) {
+    return prevSum + number;
   }
 
-  // console.log({
-  //   numbers,
-  //   result: sumArr(numbers)
-  // });
+  const sumArr = numbers.reduce(sumArrReducer);
+
+  console.log({
+    numbers,
+    result: sumArr
+  });
 }
 console.log('---');
 console.groupEnd()
@@ -247,14 +257,16 @@ console.groupEnd()
 console.group('16. Sukurti funkciją, kuri ima masyvą ir grąžina visų elementų vidurkį');
 console.log('---');
 {
-  function avgArr(arr) {
-    // Jūsų kodas
+  function avgArrReducer(prevSum, number) {
+    return prevSum + number;
   }
 
-  // console.log({
-  //   numbers,
-  //   result: avgArr(numbers)
-  // });
+  const avgArr = numbers.reduce(avgArrReducer) / numbers.length;
+
+  console.log({
+    numbers,
+    result: avgArr
+  });
 }
 console.log('---');
 console.groupEnd()
@@ -262,14 +274,17 @@ console.groupEnd()
 console.group('17. Sukurti funkciją, kuri ima masyvą ir grąžina didžiausią skaičių masyve.');
 console.log('---');
 {
-  function arrMax(arr) {
-    //  Jūsų kodas
+
+  function arrMaxReducer(previousLargestNumber, currentLargestNumber) {
+    return (currentLargestNumber > previousLargestNumber) ? currentLargestNumber : previousLargestNumber;
   }
 
-  // console.log({
-  //   numbers,
-  //   result: arrMax(numbers)
-  // });
+  const arrMax = numbers.reduce(arrMaxReducer);
+
+  console.log({
+    numbers,
+    result: arrMax
+  });
 }
 console.log('---');
 console.groupEnd()
@@ -277,14 +292,16 @@ console.groupEnd()
 console.group('18. Sukurti funkciją, kuri ima masyvą ir grąžina mažiausią skaičių masyve.');
 console.log('---');
 {
-  function arrMin(arr) {
-    //  Jūsų kodas
+  function arrMinReducer(previousSmallestNumber, currentSmallestNumber) {
+    return (currentSmallestNumber < previousSmallestNumber) ? currentSmallestNumber : previousSmallestNumber;
   }
 
-  // console.log({
-  //   numbers,
-  //   result: arrMin(numbers)
-  // });
+  const arrMin = numbers.reduce(arrMinReducer);
+
+  console.log({
+    numbers,
+    result: arrMin
+  });
 }
 console.log('---');
 console.groupEnd();
