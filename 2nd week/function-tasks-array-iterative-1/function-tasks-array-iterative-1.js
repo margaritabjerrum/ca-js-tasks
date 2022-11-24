@@ -208,13 +208,18 @@ console.groupEnd();
 
 console.groupCollapsed('10. Sukurkite objektą, kuriame būtų apskaičiuotas vairuojančių žmonių kiekis pagal lytį');
 {
-  function filterDrivingFemale(person) {
-    return person.sex === 'female' && person.hasCar;
+  function assignDriverCountReducer (prevDriversBySex, person) {
+    if (person.hasCar) {
+      if (person.sex === 'male') prevDriversBySex.male += 1;
+      else prevDriversBySex.female += 1;
+    }
+
+    return prevDriversBySex;
   }
 
-  const femaleThatDrives = people.filter(filterDrivingFemale);
+  const driversBySex = people.reduce(assignDriverCountReducer, { male: 0, female: 0 });
 
-  console.table(`{female : ${femaleThatDrives.length}}`);
+  console.log(driversBySex);
 }  
 console.groupEnd();
 
