@@ -175,15 +175,15 @@ console.log();
 console.group("10. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 2 parametru perduoda raidė, priešingu atveju false");
 {
   function containsLetter(str, letter) {
-    // code ...
+    return str.includes(letter) ? true : false;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': containsLetter('labas', 'a'),
-  //   'kempė, a': containsLetter('kempė', 'a'),
-  //   'Finakolė, u': containsLetter('Finakolė', 'u'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas, a': containsLetter('labas', 'a'),
+    'kempė, a': containsLetter('kempė', 'a'),
+    'Finakolė, u': containsLetter('Finakolė', 'u'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
