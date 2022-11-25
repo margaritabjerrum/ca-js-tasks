@@ -71,15 +71,39 @@ console.log();
 
 console.group("5. Sukurkite funkciją, kuri atspausdina pirmojo parametro viduriniają raidę");
 {
-  // Funkcijos deklaravimas
-  function printMiddleLetter(str) {
-    // code ...
+ 
+  function printMiddleLetter(str) { // Funkcijos deklaravimas
+    return console.log(str.charAt((str.length - 1) / 2));
   }
-  // console.log('---');
-  // printMiddleLetter('Labas');
-  // printMiddleLetter('Ate');
-  // printMiddleLetter('Brieda');
-  // console.log('---');
+  console.log('---');
+  printMiddleLetter('Labas');
+  printMiddleLetter('Ate');
+  printMiddleLetter('Brieda');
+  console.log('---');
+}
+
+{
+  function printMiddleLetter(str) {
+
+    let position;
+    let length;
+  
+    if(str.length % 2 === 1) {
+        position = str.length / 2;
+        length = 1;
+    } else {
+        position = str.length / 2 - 1;
+        length = 2;
+    }
+  
+    console.log(str.substring(position, position + length));
+  }
+  
+  console.log('---');
+  printMiddleLetter('Labas');
+  printMiddleLetter('Ate');
+  printMiddleLetter('Brieda');
+  console.log('---');
 }
 console.groupEnd();
 console.log();
