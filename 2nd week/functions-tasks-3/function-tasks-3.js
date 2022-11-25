@@ -58,12 +58,12 @@ console.group("4. Sukurkite funkciją, kuri atspausdina pirmojo parametro paskut
 {
   // Funkcijos deklaravimas
   function printLastLetter(str) {
-    // code ...
+    return console.log(str.charAt(str.length - 1));
   }
   // console.log('---');
-  // printLastLetter('Labas');
-  // printLastLetter('Ate');
-  // printLastLetter('Brieda');
+  printLastLetter('Labas');
+  printLastLetter('Ate');
+  printLastLetter('Brieda');
   // console.log('---');
 }
 console.groupEnd();
