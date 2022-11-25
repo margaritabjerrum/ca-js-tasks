@@ -17,25 +17,25 @@ console.group("1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis r
   const capitalPhrase3 = printCapital(phrase3);
   console.log(capitalPhrase3);
 
-
 }
 console.groupEnd();
 console.log();
 
 console.group("2. Sukurkite funkciją, kuri atspausdina tekstą mažosiomis raidėmis");
 {
-  // Funkcijos deklaravimas
-  function printLower(str) {
-    // code ...
+  function printLower(phrase) {
+    return phrase.toLowerCase();    ;
   }
-  // console.log('---');
-  // console.log("ABCD");
-  // printLower("abcd");
-  // console.log("AAAA");
-  // printLower("AAAA");
-  // console.log("aBcD");
-  // printLower("aBcD");
-  // console.log('---');
+
+  const capitalPhrase1 = printLower(phrase1);
+  console.log(capitalPhrase1);
+
+  const capitalPhrase2 = printLower(phrase2);
+  console.log(capitalPhrase2);
+
+  const capitalPhrase3 = printLower(phrase3);
+  console.log(capitalPhrase3);
+
 }
 console.groupEnd();
 console.log();
