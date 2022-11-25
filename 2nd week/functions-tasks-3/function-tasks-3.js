@@ -24,7 +24,7 @@ console.log();
 console.group("2. Sukurkite funkciją, kuri atspausdina tekstą mažosiomis raidėmis");
 {
   function printLower(phrase) {
-    return phrase.toLowerCase();    ;
+    return phrase.toLowerCase();
   }
 
   const capitalPhrase1 = printLower(phrase1);
@@ -42,18 +42,19 @@ console.log();
 
 console.group("3. Sukurkite funkciją, kuri atspausdina pirmojo parametro pirmają raidę");
 {
-  // Funkcijos deklaravimas
-  function printFirstLetter(str) {
-    // code ...
+  function printFirstLetter(phrase) {
+    return phrase.charAt(0);
   }
-  // console.log('---');
-  // console.log("ABCD");
-  // printFirstLetter("abcd");
-  // console.log("AAAA");
-  // printFirstLetter("AAAA");
-  // console.log("aBcD");
-  // printFirstLetter("aBcD");
-  // console.log('---');
+
+  const capitalPhrase1 = printFirstLetter(phrase1);
+  console.log(capitalPhrase1);
+
+  const capitalPhrase2 = printFirstLetter(phrase2);
+  console.log(capitalPhrase2);
+
+  const capitalPhrase3 = printFirstLetter(phrase3);
+  console.log(capitalPhrase3);
+
 }
 console.groupEnd();
 console.log();
