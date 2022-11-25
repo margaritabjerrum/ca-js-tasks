@@ -1,21 +1,17 @@
-const phrase1 = 'Begemotas, kuris bijojo skiepu'
-const phrase2 = 'I hope I know what I am doing :)'
-const phrase3 = 'The weather is NICE!'
-
 console.group("1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis raidėmis");
 {
-  function printCapital(phrase) {
-    return phrase.toUpperCase();
-  }
-
-  const capitalPhrase1 = printCapital(phrase1);
-  console.log(capitalPhrase1);
-
-  const capitalPhrase2 = printCapital(phrase2);
-  console.log(capitalPhrase2);
-
-  const capitalPhrase3 = printCapital(phrase3);
-  console.log(capitalPhrase3);
+    // Funkcijos deklaravimas
+    function printCapital(str) {
+      return console.log(str.toUpperCase());
+    }
+    // console.log('---');
+    // console.log("abcd");
+    printCapital("abcd");
+    // console.log("AAAA");
+    printCapital("AAAA");
+    // console.log("aBcD");
+    printCapital("aBcD");
+    // console.log('---');
 
 }
 console.groupEnd();
@@ -23,37 +19,36 @@ console.log();
 
 console.group("2. Sukurkite funkciją, kuri atspausdina tekstą mažosiomis raidėmis");
 {
-  function printLower(phrase) {
-    return phrase.toLowerCase();
-  }
-
-  const capitalPhrase1 = printLower(phrase1);
-  console.log(capitalPhrase1);
-
-  const capitalPhrase2 = printLower(phrase2);
-  console.log(capitalPhrase2);
-
-  const capitalPhrase3 = printLower(phrase3);
-  console.log(capitalPhrase3);
-
+    // Funkcijos deklaravimas
+    function printLower(str) {
+      return console.log(str.toLowerCase());
+    }
+    // console.log('---');
+    // console.log("ABCD");
+    printLower("abcd");
+    // console.log("AAAA");
+    printLower("AAAA");
+    // console.log("aBcD");
+    printLower("aBcD");
+    // console.log('---');
 }
 console.groupEnd();
 console.log();
 
 console.group("3. Sukurkite funkciją, kuri atspausdina pirmojo parametro pirmają raidę");
 {
-  function printFirstLetter(phrase) {
-    return phrase.charAt(0);
-  }
-
-  const capitalPhrase1 = printFirstLetter(phrase1);
-  console.log(capitalPhrase1);
-
-  const capitalPhrase2 = printFirstLetter(phrase2);
-  console.log(capitalPhrase2);
-
-  const capitalPhrase3 = printFirstLetter(phrase3);
-  console.log(capitalPhrase3);
+    // Funkcijos deklaravimas
+    function printFirstLetter(str) {
+      return console.log(str.charAt(0));
+    }
+    // console.log('---');
+    // console.log("ABCD");
+    printFirstLetter("abcd");
+    // console.log("AAAA");
+    printFirstLetter("AAAA");
+    // console.log("aBcD");
+    printFirstLetter("aBcD");
+    // console.log('---');
 
 }
 console.groupEnd();
