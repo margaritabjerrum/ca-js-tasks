@@ -111,15 +111,15 @@ console.log();
 console.group("6. Sukurkite funkciją, kuri grąžina simbolių darinio raidžių skaičių");
 {
   function getDoubleLetterCount(str) {
-    // code ...
+    return str.length;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': getDoubleLetterCount('labas'),
-  //   'kranas': getDoubleLetterCount('kranas'),
-  //   'kebabas': getDoubleLetterCount('kebabas'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': getDoubleLetterCount('labas'),
+    'kranas': getDoubleLetterCount('kranas'),
+    'kebabas': getDoubleLetterCount('kebabas'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
