@@ -143,15 +143,15 @@ console.log();
 console.group("8. Sukurkite funkciją, kuri grąžina pirmo ir antro parametro bendrą simbolių skaičių");
 {
   function getArgsLetterSum(a, b) {
-    // code ...
+    return a.length + b.length;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, abc': getArgsLetterSum('labas', 'abc'),
-  //   'kranas, jonas': getArgsLetterSum('kranas', 'jonas'),
-  //   'kebabas, kefyras': getArgsLetterSum('kebabas', 'kefyras'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas, abc': getArgsLetterSum('labas', 'abc'),
+    'kranas, jonas': getArgsLetterSum('kranas', 'jonas'),
+    'kebabas, kefyras': getArgsLetterSum('kebabas', 'kefyras'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
