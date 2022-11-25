@@ -1,17 +1,23 @@
+const phrase1 = 'Begemotas, kuris bijojo skiepu'
+const phrase2 = 'I hope I know what I am doing :)'
+const phrase3 = 'The weather is NICE!'
+
 console.group("1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis raidėmis");
 {
-  // Funkcijos deklaravimas
-  function printCapital(str) {
-    // code ...
+  function printCapital(phrase) {
+    return phrase.toUpperCase();
   }
-  // console.log('---');
-  // console.log("abcd");
-  // printCapital("abcd");
-  // console.log("AAAA");
-  // printCapital("AAAA");
-  // console.log("aBcD");
-  // printCapital("aBcD");
-  // console.log('---');
+
+  const capitalPhrase1 = printCapital(phrase1);
+  console.log(capitalPhrase1);
+
+  const capitalPhrase2 = printCapital(phrase2);
+  console.log(capitalPhrase2);
+
+  const capitalPhrase3 = printCapital(phrase3);
+  console.log(capitalPhrase3);
+
+
 }
 console.groupEnd();
 console.log();
