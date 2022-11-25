@@ -4,14 +4,14 @@ console.group("1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis r
     function printCapital(str) {
       return console.log(str.toUpperCase());
     }
-    // console.log('---');
-    // console.log("abcd");
+    console.log('---');
+    console.log("abcd");
     printCapital("abcd");
-    // console.log("AAAA");
+    console.log("AAAA");
     printCapital("AAAA");
-    // console.log("aBcD");
+    console.log("aBcD");
     printCapital("aBcD");
-    // console.log('---');
+    console.log('---');
 
 }
 console.groupEnd();
@@ -23,14 +23,14 @@ console.group("2. Sukurkite funkciją, kuri atspausdina tekstą mažosiomis raid
     function printLower(str) {
       return console.log(str.toLowerCase());
     }
-    // console.log('---');
-    // console.log("ABCD");
+    console.log('---');
+    console.log("ABCD");
     printLower("abcd");
-    // console.log("AAAA");
+    console.log("AAAA");
     printLower("AAAA");
-    // console.log("aBcD");
+    console.log("aBcD");
     printLower("aBcD");
-    // console.log('---');
+    console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -41,14 +41,14 @@ console.group("3. Sukurkite funkciją, kuri atspausdina pirmojo parametro pirmaj
     function printFirstLetter(str) {
       return console.log(str.charAt(0));
     }
-    // console.log('---');
+    console.log('---');
     // console.log("ABCD");
     printFirstLetter("abcd");
     // console.log("AAAA");
     printFirstLetter("AAAA");
     // console.log("aBcD");
     printFirstLetter("aBcD");
-    // console.log('---');
+    console.log('---');
 
 }
 console.groupEnd();
@@ -60,11 +60,11 @@ console.group("4. Sukurkite funkciją, kuri atspausdina pirmojo parametro paskut
   function printLastLetter(str) {
     return console.log(str.charAt(str.length - 1));
   }
-  // console.log('---');
+  console.log('---');
   printLastLetter('Labas');
   printLastLetter('Ate');
   printLastLetter('Brieda');
-  // console.log('---');
+  console.log('---');
 }
 console.groupEnd();
 console.log();
