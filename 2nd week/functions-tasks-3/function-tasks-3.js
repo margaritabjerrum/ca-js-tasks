@@ -159,15 +159,15 @@ console.log();
 console.group("9. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 'a' raidė, priešingu atveju <false>");
 {
   function containsLetterA(str) {
-    // code ...
+    return str.includes('a') ? true : false;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': containsLetterA('labas'),
-  //   'kempė': containsLetterA('kempė'),
-  //   'Finakolė': containsLetterA('Finakolė'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': containsLetterA('labas'),
+    'kempė': containsLetterA('kempė'),
+    'Finakolė': containsLetterA('Finakolė'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
