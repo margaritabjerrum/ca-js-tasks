@@ -127,15 +127,15 @@ console.log();
 console.group("7. Sukurkite funkciją, kuri grąžina simbolių darinio raidžių skaičių padaugintą iš dviejų");
 {
   function getDoubleLetterCount(str) {
-    // code ...
+    return str.length * 2; 
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': getDoubleLetterCount('labas'),
-  //   'kranas': getDoubleLetterCount('kranas'),
-  //   'kebabas': getDoubleLetterCount('kebabas'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': getDoubleLetterCount('labas'),
+    'kranas': getDoubleLetterCount('kranas'),
+    'kebabas': getDoubleLetterCount('kebabas'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
