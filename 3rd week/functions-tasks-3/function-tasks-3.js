@@ -343,6 +343,7 @@ console.log();
 
 console.group("17. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) 'a' raidės vietą žodyje");
 {
+  // Plius 1 prie index, nes taip parodo, kelinta raidė žodyje.
   function lastIndexOfLetterA(str) {
     return str.indexOf('a') >= 0 ? str.indexOf('a') + 1 : 'nėra';  
   }
@@ -360,16 +361,18 @@ console.log();
 
 console.group("18. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) vartotojo perduotos raidės vietą žodyje");
 {
+    // Plius 1 prie index, nes taip parodo, kelinta raidė žodyje.
   function lastIndexOfLetter(str, searchLetter) {
-    // code ...
+    return str.lastIndexOf(searchLetter) >= 0 ? str.lastIndexOf(searchLetter) + 1 : 'nėra';  
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': lastIndexOfLetter('labas', 'a'),
-  //   'kempės, k': lastIndexOfLetter('kempės', 'k'),
-  //   '123123, z': lastIndexOfLetter('123123', 'z'),
-  // })
-  // console.log('---');
+
+  console.log('---');
+  console.log({
+    'labas, a': lastIndexOfLetter('labas', 'a'),
+    'kempės, k': lastIndexOfLetter('kempės', 'k'),
+    '123123, z': lastIndexOfLetter('123123', 'z'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
