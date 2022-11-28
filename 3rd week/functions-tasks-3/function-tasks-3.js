@@ -191,15 +191,19 @@ console.log();
 console.group("11. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra lyginis skaičius simbolių");
 {
   function isEvenNumberOfLetters(str) {
-    // code ...
+    if (str.length % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': isEvenNumberOfLetters('labas'),
-  //   'kempės': isEvenNumberOfLetters('kempės'),
-  //   '123123': isEvenNumberOfLetters('123123'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': isEvenNumberOfLetters('labas'),
+    'kempės': isEvenNumberOfLetters('kempės'),
+    '123123': isEvenNumberOfLetters('123123'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
