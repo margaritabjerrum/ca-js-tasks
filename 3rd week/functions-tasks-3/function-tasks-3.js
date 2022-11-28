@@ -240,15 +240,28 @@ console.log();
 console.group("13. Sukurkite funkciją, kuri grąžina priebalsių kiekį žodyje");
 {
   function getNumberOfConsonants(str) {
-    // code ...
+
+    let consonants = 'BbCcČčDdFfGgHhJjKkLlMmNnPpRrSsŠšTtVvZzŽžQqWwXx';
+
+    let numberOfVowels = 0;
+
+    for (let i = 0; i < str.length; i += 1) {
+      if (consonants.indexOf(str[i]) >= 0)
+       {
+        numberOfVowels += 1;
+      } else {
+        numberOfVowels += 0;
+      }
+    }
+    return numberOfVowels;
   }
-  // console.log('---');
-  // console.log({
-  //   'aaaaa': getNumberOfConsonants('aaaaa'),
-  //   'sasasasa': getNumberOfConsonants('sasasasa'),
-  //   'aeyuioąčė': getNumberOfConsonants('aeyuioąčė'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'aaaaa': getNumberOfConsonants('aaaaa'),
+    'sasasasa': getNumberOfConsonants('sasasasa'),
+    'aeyuioąčė': getNumberOfConsonants('aeyuioąčė'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
