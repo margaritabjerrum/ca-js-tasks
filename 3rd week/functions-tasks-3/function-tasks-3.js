@@ -344,15 +344,16 @@ console.log();
 console.group("17. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) 'a' raidės vietą žodyje");
 {
   function lastIndexOfLetterA(str) {
-    // code ...
+    return str.indexOf('a') >= 0 ? str.indexOf('a') + 1 : 'nėra';  
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': lastIndexOfLetterA('labas'),
-  //   'kempės': lastIndexOfLetterA('kempės'),
-  //   '123123': lastIndexOfLetterA('123123'),
-  // })
-  // console.log('---');
+
+  console.log('---');
+  console.log({
+    'labas': lastIndexOfLetterA('labas'),
+    'kempės': lastIndexOfLetterA('kempės'),
+    '123123': lastIndexOfLetterA('123123'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
