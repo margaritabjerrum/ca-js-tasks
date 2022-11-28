@@ -269,14 +269,13 @@ console.log();
 console.group("14. Sukurkite funkciją, kuri grąžina <true>, jeigu NĖRA skaičių");
 {
   function isOnlyLetters(str) {
-    // for (let i = 0; i < str.length; i += 1) {
-    //   return typeof str[i] !== 'number';
-    // }
+
+    
   }
 
   console.log('---');
   console.log({
-    'labas': isOnlyLetters('labas'),
+    'labas': isOnlyLetters('l1abas'),
     'kempės': isOnlyLetters('kempės'),
     '123123': isOnlyLetters('123123'),
   })
@@ -381,14 +380,14 @@ console.group("19. Sukurkite funkciją, kuri grąžina indeksų masyvą su visai
 {
   function indexesOfLetterA(str) {
 
-    const arrayOfA = [];
+    const arrayOfAindexes = [];
 
     for (let i = 0; i < str.length; i += 1) {
       if (str[i] === 'a') {
-        arrayOfA.push(i)
+        arrayOfAindexes.push(i)
       }
     }
-    return arrayOfA;
+    return arrayOfAindexes;
   }
 
   console.log('---');
@@ -406,14 +405,14 @@ console.group("20. Sukurkite funkciją, kuri grąžina indeksų masyvą su visai
 {
   function indexesOfLetter(str, searchLetter) {
     
-    const arrayOfGivenLetter = [];
+    const arrayOfGivenLetterIndexes = [];
 
     for (let i = 0; i < str.length; i += 1) {
       if (str[i] === searchLetter) {
-        arrayOfGivenLetter.push(i)
+        arrayOfGivenLetterIndexes.push(i)
       }
     }
-    return arrayOfGivenLetter;
+    return arrayOfGivenLetterIndexes;
   }
 
   console.log('---');
