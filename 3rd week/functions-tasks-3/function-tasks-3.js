@@ -269,7 +269,9 @@ console.log();
 console.group("14. Sukurkite funkciją, kuri grąžina <true>, jeigu NĖRA skaičių");
 {
   function isOnlyLetters(str) {
-    // ... code
+    // for (let i = 0; i < str.length; i += 1) {
+    //   return typeof str[i] !== 'number';
+    // }
   }
 
   console.log('---');
@@ -286,15 +288,28 @@ console.log();
 console.group("15. Sukurkite funkciją, kuri grąžina 'a' raidžių kiekį žodyje");
 {
   function letterACount(str) {
-    // code ...
+
+    const a = 'a';
+
+    let numberOfa = 0;
+
+    for (let i = 0; i < str.length; i += 1) {
+      if (a.indexOf(str[i]) >= 0)
+       {
+        numberOfa += 1;
+      } else {
+        numberOfa += 0;
+      }
+    }
+    return numberOfa;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': letterACount('labas'),
-  //   'kempės': letterACount('kempės'),
-  //   '123123': letterACount('123123'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': letterACount('labas'),
+    'kempės': letterACount('kempės'),
+    '123123': letterACount('123123'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
