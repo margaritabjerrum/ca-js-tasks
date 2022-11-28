@@ -211,15 +211,28 @@ console.log();
 console.group("12. Sukurkite funkciją, kuri grąžina balsių kiekį žodyje");
 {
   function getNumberOfVowels(str) {
-    // code ...
+
+    let voweles = 'AaĄąEeĘęĖėIiĮįYyOoUuŲųŪū';
+
+    let numberOfVowels = 0;
+
+    for (let i = 0; i < str.length; i += 1) {
+      if (voweles.indexOf(str[i]) >= 0)
+       {
+        numberOfVowels += 1;
+      } else {
+        numberOfVowels += 0;
+      }
+    }
+    return numberOfVowels;
   }
-  // console.log('---');
-  // console.log({
-  //   'aaaaa': getNumberOfVowels('aaaaa'),
-  //   'sasasasa': getNumberOfVowels('sasasasa'),
-  //   'aeyuioąčė': getNumberOfVowels('aeyuioąčė'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'aaaaa': getNumberOfVowels('aaaaa'),
+    'sasasasa': getNumberOfVowels('sasasasa'),
+    'aeyuioąčė': getNumberOfVowels('aeyuioąčė'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
