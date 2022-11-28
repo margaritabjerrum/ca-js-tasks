@@ -317,15 +317,26 @@ console.log();
 console.group("16. Sukurkite funkciją, kuri grąžina bet kokios raidės kiekį žodyje");
 {
   function letterCount(str, searchLetter) {
-    // code ...
+   
+    let numberOfSearchLetter = 0;
+
+    for (let i = 0; i < str.length; i += 1) {
+      if (searchLetter.indexOf(str[i]) >= 0)
+       {
+        numberOfSearchLetter += 1;
+      } else {
+        numberOfSearchLetter += 0;
+      }
+    }
+    return numberOfSearchLetter;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': letterCount('labas', 'a'),
-  //   'kempės, k': letterCount('kempės', 'k'),
-  //   '123123, z': letterCount('123123', 'z'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas, a': letterCount('labas', 'a'),
+    'kempės, k': letterCount('kempės', 'k'),
+    '123123, z': letterCount('123123', 'z'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
