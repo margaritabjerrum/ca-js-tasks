@@ -405,15 +405,24 @@ console.log();
 console.group("20. Sukurkite funkciją, kuri grąžina indeksų masyvą su visais vartotojo įvestos raidės pasikartojimais žodyje");
 {
   function indexesOfLetter(str, searchLetter) {
-    // code ...
+    
+    const arrayOfGivenLetter = [];
+
+    for (let i = 0; i < str.length; i += 1) {
+      if (str[i] === searchLetter) {
+        arrayOfGivenLetter.push(i)
+      }
+    }
+    return arrayOfGivenLetter;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': indexesOfLetter('labas', 'a'),
-  //   'kempės, m': indexesOfLetter('kempės', 'm'),
-  //   '123123, 2': indexesOfLetter('123123', '2'),
-  // })
-  // console.log('---');
+
+  console.log('---');
+  console.log({
+    'labas, a': indexesOfLetter('labas', 'a'),
+    'kempės, m': indexesOfLetter('kempės', 'm'),
+    '123123, 2': indexesOfLetter('123123', '2'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
