@@ -266,20 +266,37 @@ console.group("13. Sukurkite funkciją, kuri grąžina priebalsių kiekį žodyj
 console.groupEnd();
 console.log();
 
-console.group("14. Sukurkite funkciją, kuri grąžina <true>, jeigu NĖRA skaičių");
+console.group("14. Sukurkite funkciją, kuri grąžina <true>, jeigu NĖRA skaimenų");
 {
   function isOnlyLetters(str) {
-
-    
+    const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    for (let i = 0; i < numbers.length; i += 1) {
+      const number = numbers[i];
+      if (str.includes(number)) return false;
+    }
+    return true;
   }
 
   console.log('---');
   console.log({
-    'labas': isOnlyLetters('l1abas'),
+    'labas': isOnlyLetters('labas'),
     'kempės': isOnlyLetters('kempės'),
     '123123': isOnlyLetters('123123'),
   })
   console.log('---');
+}
+{
+  const createStringChecker = (symbolsArr) => {
+    return (text) => {
+     for (let i = 0; i < symbolsArr.length; i++) {
+       const symbol = symbolsArr[i];
+       if (text.includes(symbol)) return true;
+     }
+
+     return false;
+
+   }
+ }
 }
 console.groupEnd();
 console.log();
@@ -342,16 +359,15 @@ console.log();
 
 console.group("17. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) 'a' raidės vietą žodyje");
 {
-  // Plius 1 prie index, nes taip parodo, kelinta raidė žodyje.
-  function lastIndexOfLetterA(str) {
-    return str.indexOf('a') >= 0 ? str.indexOf('a') + 1 : 'nėra';  
+  function indexOfLetterA(str) {
+    return str.indexOf('a') >= 0 ? str.indexOf('a') : 'nėra';  
   }
 
   console.log('---');
   console.log({
-    'labas': lastIndexOfLetterA('labas'),
-    'kempės': lastIndexOfLetterA('kempės'),
-    '123123': lastIndexOfLetterA('123123'),
+    'labas': indexOfLetterA('labas'),
+    'kempės': indexOfLetterA('kempės'),
+    '123123': indexOfLetterA('123123'),
   })
   console.log('---');
 }
@@ -360,16 +376,15 @@ console.log();
 
 console.group("18. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) vartotojo perduotos raidės vietą žodyje");
 {
-    // Plius 1 prie index, nes taip parodo, kelinta raidė žodyje.
-  function lastIndexOfLetter(str, searchLetter) {
-    return str.lastIndexOf(searchLetter) >= 0 ? str.lastIndexOf(searchLetter) + 1 : 'nėra';  
+  function indexOfLetter(str, searchLetter) {
+    return str.indexOf(searchLetter) >= 0 ? str.indexOf(searchLetter) : 'nėra';  
   }
 
   console.log('---');
   console.log({
-    'labas, a': lastIndexOfLetter('labas', 'a'),
-    'kempės, k': lastIndexOfLetter('kempės', 'k'),
-    '123123, z': lastIndexOfLetter('123123', 'z'),
+    'labas, a': indexOfLetter('labas', 'a'),
+    'kempės, k': indexOfLetter('kempės', 'k'),
+    '123123, z': indexOfLetter('123123', 'z'),
   })
   console.log('---');
 }
