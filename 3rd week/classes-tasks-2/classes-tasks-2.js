@@ -57,13 +57,48 @@ console.groupEnd();
 
 console.groupCollapsed('2. - https://edabit.com/challenge/yxKoCKemzacK6PECM');
 {
-  // ... code
+  class Calculator {
+    add(num1, num2) {
+      return num1 + num2;
+    }
+
+    subtract(num1, num2) {
+      return num1 - num2;
+    }
+
+    multiply(num1, num2) {
+      return num1 * num2;
+    }
+
+    divide(num1, num2) {
+      return num1 / num2;
+    }
+  }
+
+  const calculator = new Calculator();
+  console.log(calculator)
+
+  const numbers = [10, 5];
+
+  const addResult = calculator.add(...numbers);
+  console.log(`addResult of (10, 5): ${addResult}`);
+
+  const subtractResult = calculator.subtract(...numbers);
+  console.log(`subtractResult of (10, 5): ${subtractResult}`);
+
+  const multiplyResult = calculator.multiply(...numbers);
+  console.log(`multiplyResult of (10, 5): ${multiplyResult}`);
+
+  const divideResult = calculator.divide(...numbers);
+  console.log(`divideResult of (10, 5): ${divideResult}`);
+
+
 }
 console.groupEnd();
 
 console.groupCollapsed('3. - https://edabit.com/challenge/kGLhgwGaLJsCMS7wS');
 {
-  // ... code
+
 }
 console.groupEnd();
 
