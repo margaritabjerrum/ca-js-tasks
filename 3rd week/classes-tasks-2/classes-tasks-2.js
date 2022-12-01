@@ -155,7 +155,26 @@ console.groupEnd();
 
 console.groupCollapsed('5. - https://edabit.com/challenge/Hgb38yhWGwJCMHbRQ');
 {
-  // ... code
+    class Circle {
+
+    constructor(radius) {
+      this.radius = radius
+    }
+
+    getArea() {
+      return Math.PI * this.radius ** 2;
+    }
+
+    getPerimeter() {
+      return 2 * Math.PI * this.radius;
+    }
+  }
+
+  const circle = new Circle(4.44);
+
+  console.log(`Area: ${circle.getArea()}`);
+  console.log(`Perimeter: ${circle.getPerimeter()}`);
+
 }
 console.groupEnd();
 
