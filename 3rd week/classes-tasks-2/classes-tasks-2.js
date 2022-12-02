@@ -288,7 +288,33 @@ console.groupEnd();
 
 console.groupCollapsed('9. - https://edabit.com/challenge/7PA4jhWqDYJT4ixLp');
 {
-  // ... code
+  class User {
+    static userCount = 0;
+
+    constructor(username) {
+      User.userCount += 1;
+      this.username = username;
+      this.userCount = User.userCount;
+    }
+
+  }
+
+  const user1 = new User("johnsmith10");
+  console.log(`User ${user1.username} was added`);
+  console.log(`User count at this point: ${User.userCount}`);
+
+  const user2 = new User("marysue1989");
+  console.log(`User ${user2.username} was added`);
+  console.log(`User count at this point: ${User.userCount}`);
+
+  const user3 = new User("milan_rodrick");
+  console.log(`User ${user3.username} was added`);
+  console.log(`User count at this point: ${User.userCount}`);
+
+  const user4 = new User("joshua_senoron");
+  console.log(`User ${user4.username} was added`);
+  console.log(`User count at this point: ${User.userCount}`);
+
 }
 console.groupEnd();
 
