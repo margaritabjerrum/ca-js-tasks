@@ -320,6 +320,30 @@ console.groupEnd();
 
 console.groupCollapsed('10. - https://edabit.com/challenge/s5Sz2ovKsvtGxNGgn');
 {
-  // ... code
+  class Book {
+    constructor(title, author) {
+      this.title = title;
+      this.author = author;
+    }
+
+    getTitle() {
+      return `Title: ${this.title}`;
+    }
+
+    getAuthor() {
+      return `Author: ${this.author}`;
+    }
+  }
+
+  const PP = new Book('Pride and Prejudice', 'Jane Austen');
+  const H = new Book('Hamlet', 'William Shakespeare');
+  const WP = new Book('War and Peace', 'Leo Tolstoy');
+
+  console.log(`Calling PP.title returns: ${PP.title}`);
+  console.log(`Calling H.title returns: ${H.title}`);
+  console.log(`Calling WP.title returns: ${WP.title}`);
+  console.log(`Calling PP.author returns: ${PP.author}`);
+  console.log(`Calling H.author returns: ${H.author}`);
+  console.log(`Calling WP.author returns: ${WP.author}`);
 }
 console.groupEnd();
