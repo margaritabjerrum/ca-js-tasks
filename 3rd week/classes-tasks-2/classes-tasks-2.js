@@ -202,8 +202,8 @@ console.groupCollapsed('7. - https://edabit.com/challenge/HKmJFmZZCX53ff4ke');
 {
   class IceCream {
     constructor(flavor, numSprinkles) {
-      this.flavor = flavor
-      this.numSprinkles = numSprinkles
+      this.flavor = flavor;
+      this.numSprinkles = numSprinkles;
     }
   }
 
@@ -242,7 +242,47 @@ console.groupEnd();
 
 console.groupCollapsed('8. - https://edabit.com/challenge/9zwdrfW99zmdRhibi');
 {
-  // ... code
+
+  class OnesThreesNines {
+
+    constructor(number) {
+      this.number = number;
+    }
+
+    get ones() {
+      return Math.floor(this.number / 1);
+    }
+
+    get threes() {
+      return Math.floor(this.number / 3);
+    }
+
+    get nines() {
+      return Math.floor(this.number / 9);
+    }
+  }
+
+  const values = [
+    new OnesThreesNines (0),
+    new OnesThreesNines (1),
+    new OnesThreesNines (2),
+    new OnesThreesNines (3),
+    new OnesThreesNines (4),
+    new OnesThreesNines (10),
+    new OnesThreesNines (13),
+    new OnesThreesNines (15),
+    new OnesThreesNines (17),
+    new OnesThreesNines (20)
+  ];
+
+  const numberOfOnes = values.map((value) => (value.ones));
+  const numberOfThrees = values.map((value) => (value.threes));
+  const numberOfNines = values.map((value) => (value.nines));
+
+  console.log(numberOfOnes);
+  console.log(numberOfThrees);
+  console.log(numberOfNines);
+
 }
 console.groupEnd();
 
