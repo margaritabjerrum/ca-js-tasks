@@ -250,7 +250,12 @@ console.groupEnd();
 
 console.groupCollapsed('7. Atspausdinti tik ketvirto kurso studentus');
 {
-  // ... sprendimas ir spausdinimas
+  const fourthYearStudents = students.filter(student => student.course === 4);
+  if (fourthYearStudents.length > 0) {
+    fourthYearStudents.forEach(student => console.log(`${student.name} ${student.surname}`));
+  } else {
+    console.log(`There are no Fourth year students`);
+  }
 }
 console.groupEnd();
 
