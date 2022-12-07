@@ -238,7 +238,13 @@ console.groupEnd();
 
 console.groupCollapsed('6. Atspausdinti tik trečio kurso studentus');
 {
-  // ... sprendimas ir spausdinimas
+  const thirdYearStudents = students.filter(student => student.course === 3);
+  if (thirdYearStudents.length > 0) {
+  thirdYearStudents.forEach(student => console.log(`${student.name} ${student.surname}`));
+  } else {
+    console.log(`There are no Third year students`);
+  }
+
 }
 console.groupEnd();
 
