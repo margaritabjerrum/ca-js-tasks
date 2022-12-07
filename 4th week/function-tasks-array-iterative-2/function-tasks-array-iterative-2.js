@@ -204,13 +204,14 @@ console.groupEnd();
 console.groupCollapsed('1. Atspausdinti visus Informatikos fakulteto studentus');
 {
   const itStudents = students.filter(student => student.faculty === 'Informatikos fakultetas');
-  console.table(itStudents)
+  console.table(itStudents);
 }
 console.groupEnd();
 
 console.groupCollapsed('2. Atspausdinti visus Chemijos fakulteto studentus');
 {
-  // ... sprendimas ir spausdinimas
+  const chemistryStudents = students.filter(student => student.faculty === 'Chemijos fakultetas');
+  console.table(chemistryStudents);
 }
 console.groupEnd();
 
