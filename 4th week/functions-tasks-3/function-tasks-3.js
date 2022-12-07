@@ -534,15 +534,15 @@ console.log();
 console.group("26. Sukurkite funkciją, kuri pirmu parametrų priimą sakinį, kiekvieną tarpą pakeičia brūkšneliu ir grąžina pakeistą sakinį");
 {
   function replaceSpaceWithDash(str) {
-    // code ...
+    return str.replaceAll(' ', '-');
   }
-  // console.log('---');
-  // console.log({
-  //   'viens du trys': replaceSpaceWithDash('viens du trys'),
-  //   'as tave myliu': replaceSpaceWithDash('as tave myliu'),
-  //   'Bairis seniuk': replaceSpaceWithDash('Bairis seniuk'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'viens du trys': replaceSpaceWithDash('viens du trys'),
+    'as tave myliu': replaceSpaceWithDash('as tave myliu'),
+    'Bairis seniuk': replaceSpaceWithDash('Bairis seniuk'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
