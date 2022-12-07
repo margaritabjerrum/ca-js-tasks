@@ -261,7 +261,22 @@ console.groupEnd();
 
 console.groupCollapsed('8. Iš students masyvo atrinkti ir atspausdinti visų studentų vidurkius');
 {
-  // ... sprendimas ir spausdinimas
+
+   const calcWeightedAvg = (modules) => {
+     let totalCredits = 0;
+     let totalWeightedMarks = 0
+     for (let i = 0; i < modules.length; i += 1) {
+       const module = modules[i];
+       totalCredits += module.credits;
+       const marksAvg = module.marks.reduce((prevSum, el) => prevSum + el, 0) / module.marks.length;
+       totalWeightedMarks += module.credits * marksAvg;
+      }
+      const weightedAvg = totalWeightedMarks / totalCredits;
+      return weightedAvg;
+    }
+    
+    students.forEach(student => console.log(student.name, calcWeightedAvg(student.modules)));
+      
 }
 console.groupEnd();
 
