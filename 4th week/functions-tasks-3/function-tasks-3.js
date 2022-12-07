@@ -498,15 +498,15 @@ console.log();
 console.group("24. Sukurkite funkciją, kuri ištrintų visus, vartotojo įvestos raidės pasikartojimus žodyje");
 {
   function removeAllOccurencesOfLetter(str, letter) {
-    // code ...
+    return str.replaceAll(letter, '');
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': removeAllOccurencesOfLetter('labas', 'a'),
-  //   'kempiniukas, i': removeAllOccurencesOfLetter('kempiniukas', 'i'),
-  //   '123123, 3': removeAllOccurencesOfLetter('123123', '3'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas, a': removeAllOccurencesOfLetter('labas', 'a'),
+    'kempiniukas, i': removeAllOccurencesOfLetter('kempiniukas', 'i'),
+    '123123, 3': removeAllOccurencesOfLetter('123123', '3'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
