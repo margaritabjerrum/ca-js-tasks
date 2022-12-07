@@ -224,7 +224,8 @@ console.groupEnd();
 
 console.groupCollapsed('4. Atspausdinti tik pirmo kurso studentus');
 {
-  // ... sprendimas ir spausdinimas
+  const firstYearStudents = students.filter(student => student.course === 1);
+  firstYearStudents.forEach(student => console.log(`${student.name} ${student.surname}`))
 }
 console.groupEnd();
 
