@@ -217,7 +217,8 @@ console.groupEnd();
 
 console.groupCollapsed('3. Atspausdinti visus Elektros ir elektronikos fakulteto studentus');
 {
-  // ... sprendimas ir spausdinimas
+  const electronicsStudents = students.filter(student => student.faculty === 'Elektros ir elektronikos fakultetas');
+  console.table(electronicsStudents);
 }
 console.groupEnd();
 
