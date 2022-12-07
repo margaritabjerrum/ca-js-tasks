@@ -463,15 +463,18 @@ console.log();
 console.group("22. Sukurkite funkciją, kuri ištrintų paskutinę surastą 'a' raidę žodyje ir grąžintų pakeistą žodį");
 {
   function removeLastLetterA(str) {
-    // code ...
+    const a = 'a';
+    const indexOfLastA = str.lastIndexOf(a);
+    if (indexOfLastA === -1) return str;
+    return str.slice(0, indexOfLastA) + str.slice(indexOfLastA + 1, str.lenght)
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': removeLastLetterA('labas'),
-  //   'kempiniukas': removeLastLetterA('kempiniukas'),
-  //   '123123': removeLastLetterA('123123'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': removeLastLetterA('labas'),
+    'kempiniukas': removeLastLetterA('kempiniukas'),
+    '123123': removeLastLetterA('123123'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
