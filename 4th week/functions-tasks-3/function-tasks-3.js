@@ -550,15 +550,20 @@ console.log();
 console.group("27. Sukurkite funkciją, kuri pirmu parametru priima sakinį, ir kiekvieno žodžio pirmają raidę padaro didžiąja");
 {
   function capitalize(str) {
-    // code ...
+    str = str[0].toUpperCase() + str.slice(1, str.lenght);
+    for (let i = 0; i < str.length; i += 1) {
+      if (str[i] === ' ') 
+      str = str.slice(0, i + 1) + str[i + 1].toUpperCase() + str.slice(i + 2, str.lenght)
+    }
+    return str;
   }
-  // console.log('---');
-  // console.log({
-  //   'viens du trys': capitalize('viens du trys'),
-  //   'as tave myliu': capitalize('as tave myliu'),
-  //   'Bairis seniuk': capitalize('Bairis seniuk'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'viens du trys': capitalize('viens du trys'),
+    'as tave myliu': capitalize('as tave myliu'),
+    'Bairis seniuk': capitalize('Bairis seniuk'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
