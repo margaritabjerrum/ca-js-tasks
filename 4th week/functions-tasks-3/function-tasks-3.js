@@ -517,12 +517,16 @@ console.log();
 console.group("25. Sukurkite funkciją, kuri pirmu parametru priimtų žodį, o antruoju - masyvą su raidėmis.");
 {
   function filterLetters(str, lettersToRemove) {
-    // code ...
+    for (let i = 0; i < lettersToRemove.length; i += 1) {
+      str = str.replaceAll(lettersToRemove[i], '');      
+    }
+
+    return str;
   }
-  // console.log('---');
-  // const str = filterLetters('Brangakmienio paveikslas', ['a', 'i']);
-  // console.log(str);
-  // console.log('---');
+  console.log('---');
+  const str = filterLetters('Brangakmienio paveikslas', ['a', 'i']);
+  console.log(str);
+  console.log('---');
 }
 console.groupEnd();
 console.log();
