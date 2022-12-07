@@ -482,15 +482,15 @@ console.log();
 console.group("23. Sukurkite funkciją, kuri ištrintų visus 'a' raidės pasikartojimus žodyje");
 {
   function removeAllOccurencesOfLetterA(str) {
-    // code ...
+    return str.replaceAll('a', '');
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': removeAllOccurencesOfLetterA('labas'),
-  //   'kempiniukas': removeAllOccurencesOfLetterA('kempiniukas'),
-  //   '123123': removeAllOccurencesOfLetterA('123123'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': removeAllOccurencesOfLetterA('labas'),
+    'kempiniukas': removeAllOccurencesOfLetterA('kempiniukas'),
+    '123123': removeAllOccurencesOfLetterA('123123'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
