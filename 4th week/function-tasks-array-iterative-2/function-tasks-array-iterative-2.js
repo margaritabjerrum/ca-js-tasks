@@ -203,7 +203,8 @@ console.groupEnd();
 
 console.groupCollapsed('1. Atspausdinti visus Informatikos fakulteto studentus');
 {
-  // ... sprendimas ir spausdinimas
+  const itStudents = students.filter(student => student.faculty === 'Informatikos fakultetas');
+  console.table(itStudents)
 }
 console.groupEnd();
 
