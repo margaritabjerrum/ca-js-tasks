@@ -231,7 +231,8 @@ console.groupEnd();
 
 console.groupCollapsed('5. Atspausdinti tik antro kurso studentus');
 {
-  // ... sprendimas ir spausdinimas
+  const secondYearStudents = students.filter(student => student.course === 2);
+  secondYearStudents.forEach(student => console.log(`${student.name} ${student.surname}`))
 }
 console.groupEnd();
 
