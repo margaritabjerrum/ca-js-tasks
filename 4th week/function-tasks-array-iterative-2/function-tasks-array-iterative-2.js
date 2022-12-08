@@ -305,7 +305,24 @@ console.groupEnd();
 
 console.groupCollapsed('10. Atspausdinti visų Chemijos fakulteto studentų vidurkius');
 {
-  // ... sprendimas ir spausdinimas
+  const chemistryStudents = students.filter(student => student.faculty === 'Chemijos fakultetas');
+
+  const calcWeightedAvg = (modules) => {
+      
+    let totalCredits = 0;
+    let totalWeightedMarks = 0
+    
+    modules.forEach(module => {
+      totalCredits += module.credits;
+      const marksAvg = module.marks.reduce((prevSum, el) => prevSum + el, 0) / module.marks.length;
+      totalWeightedMarks += module.credits * marksAvg;
+    })
+    
+    return totalWeightedMarks / totalCredits;
+ 
+ }
+ 
+ chemistryStudents.forEach(student => console.log(student.name, calcWeightedAvg(student.modules)));
 }
 console.groupEnd();
 
