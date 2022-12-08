@@ -444,8 +444,7 @@ console.log();
 console.group("21. Sukurkite funkciją, kuri ištrintų pirmą surastą 'a' raidę žodyje ir grąžintų pakeistą žodį");
 {
   function removeFirstLetterA(str) {
-    const a = 'a';
-    const indexOfFirstA = str.indexOf(a);
+    const indexOfFirstA = str.indexOf('a');
     if (indexOfFirstA === -1) return str;
     return str.slice(0, indexOfFirstA) + str.slice(indexOfFirstA + 1, str.lenght)
   }
@@ -463,8 +462,7 @@ console.log();
 console.group("22. Sukurkite funkciją, kuri ištrintų paskutinę surastą 'a' raidę žodyje ir grąžintų pakeistą žodį");
 {
   function removeLastLetterA(str) {
-    const a = 'a';
-    const indexOfLastA = str.lastIndexOf(a);
+    const indexOfLastA = str.lastIndexOf('a');
     if (indexOfLastA === -1) return str;
     return str.slice(0, indexOfLastA) + str.slice(indexOfLastA + 1, str.lenght)
   }
