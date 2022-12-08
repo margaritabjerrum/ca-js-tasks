@@ -328,6 +328,24 @@ console.groupEnd();
 
 console.groupCollapsed('11. Atspausdinti visų Elektros ir elektronikos fakulteto studentų vidurkius');
 {
-  // ... sprendimas ir spausdinimas
+
+  const electronicsStudents = students.filter(student => student.faculty === 'Elektros ir elektronikos fakultetas');
+  
+  const calcWeightedAvg = (modules) => {
+      
+    let totalCredits = 0;
+    let totalWeightedMarks = 0
+    
+    modules.forEach(module => {
+      totalCredits += module.credits;
+      const marksAvg = module.marks.reduce((prevSum, el) => prevSum + el, 0) / module.marks.length;
+      totalWeightedMarks += module.credits * marksAvg;
+    })
+    
+    return totalWeightedMarks / totalCredits;
+ 
+ }
+ 
+ electronicsStudents.forEach(student => console.log(student.name, calcWeightedAvg(student.modules)));
 }
 console.groupEnd();
