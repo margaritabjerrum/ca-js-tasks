@@ -282,7 +282,24 @@ console.groupEnd();
 
 console.groupCollapsed('9. Atspausdinti visų Informatikos fakulteto studentų vidurkius');
 {
-  // ... sprendimas ir spausdinimas
+  const itStudents = students.filter(student => student.faculty === 'Informatikos fakultetas');
+
+  const calcWeightedAvg = (modules) => {
+      
+      let totalCredits = 0;
+      let totalWeightedMarks = 0
+      
+      modules.forEach(module => {
+        totalCredits += module.credits;
+        const marksAvg = module.marks.reduce((prevSum, el) => prevSum + el, 0) / module.marks.length;
+        totalWeightedMarks += module.credits * marksAvg;
+      })
+      
+      return totalWeightedMarks / totalCredits;
+   
+   }
+   
+   itStudents.forEach(student => console.log(student.name, calcWeightedAvg(student.modules)));
 }
 console.groupEnd();
 
