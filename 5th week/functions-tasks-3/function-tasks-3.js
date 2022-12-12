@@ -593,17 +593,17 @@ console.log();
 //  123321 -> true
 //  123456 -> false
 console.group("29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra palindromas (taip pat skaitosi iš abiejų pusių)");
-{
-  function isPalyndrome(str) {
-    let i = 0;
-    let k = str.length - 1;
-    while (i < k) {
-      if (str[i] !== str[k]) return false;
-      i++;
-      k--;
-    }
-    return true;
-  }
+// {
+  // function isPalyndrome(str) {
+  //   let i = 0;
+  //   let k = str.length - 1;
+  //   while (i < k) {
+  //     if (str[i] !== str[k]) return false;
+  //     i++;
+  //     k--;
+  //   }
+  //   return true;
+  // }
   // console.log('---');
   // console.log({
   //   'mama': isPalyndrome('mama'),
@@ -612,6 +612,26 @@ console.group("29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra 
   //   '123456': isPalyndrome('123456'),
   // })
   // console.log('---');
+// }
+{
+
+  function isPalyndrome(str) {
+    let reverseStr = '';
+    for (let i = str.length - 1; i >= 0; i -= 1) {
+      reverseStr += str[i];
+    }
+    if (str === reverseStr) return true;
+    return false;
+  }
+
+  console.log('---');
+  console.log({
+    'mama': isPalyndrome('mama'),
+    'mamam': isPalyndrome('mamam'),
+    '123321': isPalyndrome('123321'),
+    '123456': isPalyndrome('123456'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
