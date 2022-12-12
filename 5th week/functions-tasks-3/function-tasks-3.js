@@ -569,13 +569,19 @@ console.log();
 console.group("28. Sukurkite funkciją, kuri atspausdina žodį atvirkščiai 'abc' -> 'cba'");
 {
   function strReverse(str) {
-    // code ...
+    let reverseStr = '';
+    for (let i = str.length - 1; i >= 0; i -= 1) {
+      reverseStr += str[i];
+    }
+    return reverseStr;
   }
-  // console.log('---');
-  // strReverse('viens du trys');
-  // strReverse('as tave myliu');
-  // strReverse('Bairis seniuk');
-  // console.log('---');
+  console.log('---');
+  console.log({
+  'viens du trys': strReverse('viens du trys'),
+  'as tave myliu': strReverse('as tave myliu'),
+  'Bairis seniuk': strReverse('Bairis seniuk'),
+  });
+  console.log('---');
 }
 console.groupEnd();
 console.log();
