@@ -594,16 +594,16 @@ console.log();
 //  123456 -> false
 console.group("29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra palindromas (taip pat skaitosi iš abiejų pusių)");
 // {
-  // function isPalyndrome(str) {
-  //   let i = 0;
-  //   let k = str.length - 1;
-  //   while (i < k) {
-  //     if (str[i] !== str[k]) return false;
-  //     i++;
-  //     k--;
-  //   }
-  //   return true;
-  // }
+//   function isPalyndrome(str) {
+//     let i = 0;
+//     let k = str.length - 1;
+//     while (i < k) {
+//       if (str[i] !== str[k]) return false;
+//       i++;
+//       k--;
+//     }
+//     return true;
+//   }
   // console.log('---');
   // console.log({
   //   'mama': isPalyndrome('mama'),
@@ -620,6 +620,7 @@ console.group("29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra 
     for (let i = str.length - 1; i >= 0; i -= 1) {
       reverseStr += str[i];
     }
+   
     if (str === reverseStr) return true;
     return false;
   }
@@ -692,15 +693,17 @@ console.log();
 //  labas, aš esu grybas -> ['labas', 'aš', 'esu', 'grybas']
 console.group("31. Sukurkite funkciją, kuri pirmu parametru priima sakinį ir sudeda atskirus sakinio žodžius į masyvą");
 {
+
   function splitSentence(sentence) {
-    // code ...
+   return sentence.split(' ');
   }
-  // console.log('---');
-  // console.log({
-  //   'Labas aš Jonas': splitSentence('Labas aš Jonas'),
-  //   'Kėgliai yra gerai': splitSentence('Kėgliai yra gerai'),
-  // })
-  // console.log('---');
+
+  console.log('---');
+  console.log({
+    'Labas aš Jonas': splitSentence('Labas aš Jonas'),
+    'Kėgliai yra gerai': splitSentence('Kėgliai yra gerai'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
