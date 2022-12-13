@@ -716,14 +716,14 @@ console.log();
 console.group("32. Sukurkite funkciją, kuri pirmu parametru priimą <string>'ą, o antruoju skiriklį");
 {
   function explode(str, separator) {
-    // code ...
+    return str.split(separator);
   }
-  // console.log('---');
-  // console.log({
-  //   "'Man patinka sniegas', ' '": explode('Man patinka sniegas', ' '),
-  //   "'home/about/13', '/'": explode('home/about/13', '/'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    "'Man patinka sniegas', ' '": explode('Man patinka sniegas', ' '),
+    "'home/about/13', '/'": explode('home/about/13', '/'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
