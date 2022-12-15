@@ -66,7 +66,7 @@ console.group('1. Sukurti objektų(žmonių) masyvą su 8 elementais, kuriame b�
     { name: 'Amandala', surname: 'Lick', age: 22, height: 175, weight: 62, sex: 'female' },
     { name: 'Anita', surname: 'Head', age: 45, height: 170, weight: 53, sex: 'female' },
     { name: 'Ivanalona', surname: 'Tinkle', age: 37, height: 162, weight: 43, sex: 'female' },
-    { name: 'Phil', surname: 'Freak', age: 65, height: 186, weight: 97, sex: 'male' },
+    { name: 'Phil', surname: 'Freak', age: 65, height: 186, weight: 56, sex: 'male' },
   ]
 
   console.table(people);
@@ -210,7 +210,8 @@ console.groupEnd()
 
 console.group('1. Atrinkti moteris, kuriuos jaunesnės nei 20 metų ir svoris didesnis nei 70kg ')
 {
-  const femalesYoungerThan20andHeavierThan70 = personClassArray.filter(({age, weight, sex}) => age < 20 && weight > 70 && sex === 'female');
+  const femalesYoungerThan20andHeavierThan70 = personClassArray.filter(({ age, weight, sex }) => 
+  age < 20 && weight > 70 && sex === 'female');
 
   console.table(femalesYoungerThan20andHeavierThan70);
 
@@ -219,6 +220,10 @@ console.groupEnd()
 
 console.group('2. Atrinkti vyrus, kurie vyresni nei 25 metai ir KMI mažesnis nei 18,5')
 {
+  const malesOlderThan25Underweighted = personClassArray.filter((person) => 
+  person.age > 25 && person.getBMI() < 18.5 && person.sex === 'male');
+
+  console.table(malesOlderThan25Underweighted);
 
 }
 console.groupEnd()
