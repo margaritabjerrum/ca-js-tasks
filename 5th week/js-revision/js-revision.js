@@ -63,10 +63,10 @@ console.group('1. Sukurti objektų(žmonių) masyvą su 8 elementais, kuriame b�
     {name: 'Buster', surname: 'Cherry', age: 25, height: 175, weight: 70, sex: 'male'},
     {name: 'Dixon', surname: 'Woody', age: 30, height: 200, weight: 110, sex: 'male'},
     {name: 'Eaton', surname: 'Beaver', age: 35, height: 182, weight: 85, sex: 'male'},
-    {name: 'Amanda', surname: 'Lick', age: 22, height: 175, weight: 62, sex: 'female'},
+    {name: 'Amandala', surname: 'Lick', age: 22, height: 175, weight: 62, sex: 'female'},
     {name: 'Anita', surname: 'Head', age: 45, height: 170, weight: 53, sex: 'female'},
-    {name: 'Ivana', surname: 'Tinkle', age: 37, height: 162, weight: 43, sex: 'female'},
-    {name: 'Phil', surname: 'Freak', age: 65, height: 184, weight: 97, sex: 'male'},
+    {name: 'Ivanalona', surname: 'Tinkle', age: 37, height: 162, weight: 43, sex: 'female'},
+    {name: 'Phil', surname: 'Freak', age: 65, height: 186, weight: 97, sex: 'male'},
   ]
 
   console.table(people);
@@ -97,7 +97,14 @@ console.group('3. Panaudojant array.filter atrinkti į naują masyvą ir po to a
   - kurie aukštesni nei 185cm
 */
 {
+ const peopleWithLongName = people.filter(({ name }) => name.length > 6);
+ console.table(peopleWithLongName);
 
+ const peopleHeavierThan80 = people.filter(({ weight }) => weight > 80);
+ console.table(peopleHeavierThan80);
+
+ const peopleTallerThan185 = people.filter(({ height }) => height > 185);
+ console.table(peopleTallerThan185);
 }
 console.groupEnd()
 
