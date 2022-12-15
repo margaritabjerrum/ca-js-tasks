@@ -193,7 +193,7 @@ class Person {
 
 }
 
-let person;
+let personClassArray;
 
 console.group('0. Pasinaudojant 1 dalies elementų masyvu, sukurti Person prototipų(Class) masyvą:')
 /*
@@ -202,14 +202,17 @@ console.group('0. Pasinaudojant 1 dalies elementų masyvu, sukurti Person protot
     - sukurti vidinį metodą: toString();   // atspausdina žmogų su esamom savybėm
 */
 {
-  person = people.map((onePerson) => new Person(onePerson));
+  personClassArray = people.map((onePerson) => new Person(onePerson));
 
-  console.table(person);
+  console.table(personClassArray);
 }
 console.groupEnd()
 
 console.group('1. Atrinkti moteris, kuriuos jaunesnės nei 20 metų ir svoris didesnis nei 70kg ')
 {
+  const femalesYoungerThan20andHeavierThan70 = personClassArray.filter(({age, weight, sex}) => age < 20 && weight > 70 && sex === 'female');
+
+  console.table(femalesYoungerThan20andHeavierThan70);
 
 }
 console.groupEnd()
