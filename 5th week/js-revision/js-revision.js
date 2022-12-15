@@ -59,14 +59,14 @@ console.group('1. Sukurti objektų(žmonių) masyvą su 8 elementais, kuriame b�
 */
 {
   people = [
-    {name: 'Betty', surname: 'Humper', age: 18, height: 168, weight: 90, sex: 'female'},
-    {name: 'Buster', surname: 'Cherry', age: 25, height: 175, weight: 70, sex: 'male'},
-    {name: 'Dixon', surname: 'Woody', age: 30, height: 200, weight: 110, sex: 'male'},
-    {name: 'Eaton', surname: 'Beaver', age: 35, height: 182, weight: 85, sex: 'male'},
-    {name: 'Amandala', surname: 'Lick', age: 22, height: 175, weight: 62, sex: 'female'},
-    {name: 'Anita', surname: 'Head', age: 45, height: 170, weight: 53, sex: 'female'},
-    {name: 'Ivanalona', surname: 'Tinkle', age: 37, height: 162, weight: 43, sex: 'female'},
-    {name: 'Phil', surname: 'Freak', age: 65, height: 186, weight: 97, sex: 'male'},
+    { name: 'Betty', surname: 'Humper', age: 18, height: 168, weight: 90, sex: 'female' },
+    { name: 'Buster', surname: 'Cherry', age: 25, height: 175, weight: 70, sex: 'male' },
+    { name: 'Dixon', surname: 'Woody', age: 30, height: 200, weight: 110, sex: 'male' },
+    { name: 'Eaton', surname: 'Beaver', age: 35, height: 182, weight: 85, sex: 'male' },
+    { name: 'Amandala', surname: 'Lick', age: 22, height: 175, weight: 62, sex: 'female' },
+    { name: 'Anita', surname: 'Head', age: 45, height: 170, weight: 53, sex: 'female' },
+    { name: 'Ivanalona', surname: 'Tinkle', age: 37, height: 162, weight: 43, sex: 'female' },
+    { name: 'Phil', surname: 'Freak', age: 65, height: 186, weight: 97, sex: 'male' },
   ]
 
   console.table(people);
@@ -85,7 +85,7 @@ console.group('2. Panaudojant array.forEach:')
 
   people.forEach(person => console.log(person.name, person.surname));
 
-  people.forEach(person => console.log(Math.round(person.weight / ((person.height/100) ** 2))));
+  people.forEach(person => console.log(Math.round(person.weight / ((person.height / 100) ** 2))));
 
 }
 console.groupEnd()
@@ -97,14 +97,14 @@ console.group('3. Panaudojant array.filter atrinkti į naują masyvą ir po to a
   - kurie aukštesni nei 185cm
 */
 {
- const peopleWithLongName = people.filter(({ name }) => name.length > 6);
- console.table(peopleWithLongName);
+  const peopleWithLongName = people.filter(({ name }) => name.length > 6);
+  console.table(peopleWithLongName);
 
- const peopleHeavierThan80 = people.filter(({ weight }) => weight > 80);
- console.table(peopleHeavierThan80);
+  const peopleHeavierThan80 = people.filter(({ weight }) => weight > 80);
+  console.table(peopleHeavierThan80);
 
- const peopleTallerThan185 = people.filter(({ height }) => height > 185);
- console.table(peopleTallerThan185);
+  const peopleTallerThan185 = people.filter(({ height }) => height > 185);
+  console.table(peopleTallerThan185);
 }
 console.groupEnd()
 
@@ -130,11 +130,11 @@ console.group('4. Panaudojant array.map atrinkti į naują masyvą ir po to atsp
   }));
   console.table(heightWeightAgeArray);
 
-  const BMIarray = people.map((person) => Math.round(person.weight / ((person.height/100) ** 2)));
+  const BMIarray = people.map((person) => Math.round(person.weight / ((person.height / 100) ** 2)));
   console.log(BMIarray);
 
   const BMIAndAgearray = people.map((person) => ({
-    BMI: Math.round(person.weight / ((person.height/100) ** 2)),
+    BMI: Math.round(person.weight / ((person.height / 100) ** 2)),
     age: person.age
   }));
   console.table(BMIAndAgearray);
@@ -149,15 +149,52 @@ console.group('5. Panaudojant array.reduce suskaičiuoti ir po to atspausdinti')
 */
 {
   const weightAvg = people.reduce((prevSum, { weight }) => prevSum + weight, 0) / people.length;
-  console.log({weightAvg});
+  console.log({ weightAvg });
 
   const heightAvg = people.reduce((prevSum, { height }) => prevSum + height, 0) / people.length;
-  console.log({heightAvg});
+  console.log({ heightAvg });
 
 }
 console.groupEnd()
 
 console.log(`--------------PART 2--------------`)
+
+class Person {
+  name;
+  surname;
+  age;
+  height;
+  weight;
+  sex;
+
+  constructor({
+    name,
+    surname,
+    age,
+    height,
+    weight,
+    sex,
+  }) {
+    this.name = name;
+    this.surname = surname;
+    this.age = age;
+    this.height = height;
+    this.weight = weight;
+    this.sex = sex;
+  }
+
+  getBMI() {
+    return Math.round(this.weight / ((this.height / 100) ** 2));
+  }
+
+  toString() {
+    console.log(`${this.name} ${this.surname} is ${this.age}. Is ${this.height}cm and ${this.weight}kg. Person is a ${sex}.`);
+  }
+
+}
+
+let person;
+
 console.group('0. Pasinaudojant 1 dalies elementų masyvu, sukurti Person prototipų(Class) masyvą:')
 /*
     Person klasėje:    
@@ -165,7 +202,9 @@ console.group('0. Pasinaudojant 1 dalies elementų masyvu, sukurti Person protot
     - sukurti vidinį metodą: toString();   // atspausdina žmogų su esamom savybėm
 */
 {
+  person = people.map((onePerson) => new Person(onePerson));
 
+  console.table(person);
 }
 console.groupEnd()
 
