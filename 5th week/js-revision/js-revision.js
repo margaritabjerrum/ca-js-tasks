@@ -148,6 +148,11 @@ console.group('5. Panaudojant array.reduce suskaičiuoti ir po to atspausdinti')
   - ūgio vidurkį
 */
 {
+  const weightAvg = people.reduce((prevSum, { weight }) => prevSum + weight, 0) / people.length;
+  console.log({weightAvg});
+
+  const heightAvg = people.reduce((prevSum, { height }) => prevSum + height, 0) / people.length;
+  console.log({heightAvg});
 
 }
 console.groupEnd()
