@@ -117,6 +117,27 @@ console.group('4. Panaudojant array.map atrinkti į naują masyvą ir po to atsp
   - KMI indeksus ir amžius
 */
 {
+  const heightArray = people.map((person) => person.height);
+  console.log(heightArray);
+
+  const weightArray = people.map((person) => person.weight);
+  console.log(weightArray);
+
+  const heightWeightAgeArray = people.map(({ height, weight, age }) => ({
+    height,
+    weight,
+    age
+  }));
+  console.table(heightWeightAgeArray);
+
+  const BMIarray = people.map((person) => Math.round(person.weight / ((person.height/100) ** 2)));
+  console.log(BMIarray);
+
+  const BMIAndAgearray = people.map((person) => ({
+    BMI: Math.round(person.weight / ((person.height/100) ** 2)),
+    age: person.age
+  }));
+  console.table(BMIAndAgearray);
 
 }
 console.groupEnd()
