@@ -188,7 +188,7 @@ class Person {
   }
 
   toString() {
-    console.log(`${this.name} ${this.surname} is ${this.age}. Is ${this.height}cm and ${this.weight}kg. Person is a ${sex}.`);
+    console.log(`${this.name} ${this.surname} is ${this.age} years old and ${this.height}cm and ${this.weight}kg. Person is a ${this.sex}.`);
   }
 
 }
@@ -205,6 +205,10 @@ console.group('0. Pasinaudojant 1 dalies elementų masyvu, sukurti Person protot
   personClassArray = people.map((onePerson) => new Person(onePerson));
 
   console.table(personClassArray);
+
+  personClassArray.forEach((person) => console.log(`BMI value: ${person.getBMI()}`));
+
+  personClassArray.toString();
 }
 console.groupEnd()
 
