@@ -62,7 +62,7 @@ console.group('1. Sukurti objektų(žmonių) masyvą su 8 elementais, kuriame b�
     { name: 'Betty', surname: 'Humper', age: 18, height: 168, weight: 90, sex: 'female' },
     { name: 'Buster', surname: 'Cherry', age: 25, height: 175, weight: 70, sex: 'male' },
     { name: 'Dixon', surname: 'Woody', age: 15, height: 200, weight: 150, sex: 'male' },
-    { name: 'Eaton', surname: 'Beaver', age: 35, height: 182, weight: 85, sex: 'male' },
+    { name: 'Eaton', surname: 'Beaver', age: 80, height: 182, weight: 130, sex: 'male' },
     { name: 'Amandala', surname: 'Lick', age: 17, height: 175, weight: 120, sex: 'female' },
     { name: 'Anita', surname: 'Head', age: 45, height: 170, weight: 53, sex: 'female' },
     { name: 'Ivanalona', surname: 'Tinkle', age: 37, height: 162, weight: 43, sex: 'female' },
@@ -239,7 +239,9 @@ console.groupEnd()
 
 console.group('4. Atrinkti pensininkus, su antsvoriu (KMI > 30)')
 {
+  const overweightretiredPeople = personClassArray.filter((person) => person.age > 65 && person.getBMI() > 30);
 
+  console.table(overweightretiredPeople);
 }
 console.groupEnd()
 
