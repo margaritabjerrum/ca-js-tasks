@@ -64,7 +64,7 @@ console.group('1. Sukurti objektų(žmonių) masyvą su 8 elementais, kuriame b�
     { name: 'Dixon', surname: 'Woody', age: 15, height: 200, weight: 150, sex: 'male' },
     { name: 'Eaton', surname: 'Beaver', age: 80, height: 182, weight: 130, sex: 'male' },
     { name: 'Amandala', surname: 'Lick', age: 17, height: 175, weight: 120, sex: 'female' },
-    { name: 'Anita', surname: 'Head', age: 45, height: 170, weight: 53, sex: 'female' },
+    { name: 'Anita', surname: 'Head', age: 45, height: 170, weight: 62, sex: 'female' },
     { name: 'Ivanalona', surname: 'Tinkle', age: 37, height: 162, weight: 43, sex: 'female' },
     { name: 'Phil', surname: 'Freak', age: 65, height: 186, weight: 60, sex: 'male' },
   ]
@@ -247,6 +247,8 @@ console.groupEnd()
 
 console.group('5. Atrinkti visus, kieno KMI nepatenka į rėžius [18.5; 25]')
 {
+  const peopleWithUnhealthyWeight = personClassArray.filter((person) => person.getBMI() <= 18.5 || person.getBMI() >= 25);
 
+  console.table(peopleWithUnhealthyWeight);
 }
 console.groupEnd()
