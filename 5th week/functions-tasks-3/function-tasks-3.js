@@ -1,6 +1,5 @@
 console.group("1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis raidėmis");
 {
-    // Funkcijos deklaravimas
     function printCapital(str) {
       return console.log(str.toUpperCase());
     }
@@ -19,7 +18,6 @@ console.log();
 
 console.group("2. Sukurkite funkciją, kuri atspausdina tekstą mažosiomis raidėmis");
 {
-    // Funkcijos deklaravimas
     function printLower(str) {
       return console.log(str.toLowerCase());
     }
@@ -37,16 +35,15 @@ console.log();
 
 console.group("3. Sukurkite funkciją, kuri atspausdina pirmojo parametro pirmają raidę");
 {
-    // Funkcijos deklaravimas
     function printFirstLetter(str) {
       return console.log(str.charAt(0));
     }
     console.log('---');
-    // console.log("ABCD");
+    console.log("ABCD");
     printFirstLetter("abcd");
-    // console.log("AAAA");
+    console.log("AAAA");
     printFirstLetter("AAAA");
-    // console.log("aBcD");
+    console.log("aBcD");
     printFirstLetter("aBcD");
     console.log('---');
 
@@ -56,7 +53,6 @@ console.log();
 
 console.group("4. Sukurkite funkciją, kuri atspausdina pirmojo parametro paskutinę raidę");
 {
-  // Funkcijos deklaravimas
   function printLastLetter(str) {
     return console.log(str.charAt(str.length - 1));
   }
@@ -72,7 +68,7 @@ console.log();
 console.group("5. Sukurkite funkciją, kuri atspausdina pirmojo parametro viduriniają raidę");
 {
  
-  function printMiddleLetter(str) { // Funkcijos deklaravimas
+  function printMiddleLetter(str) {
     return console.log(str.charAt((str.length - 1) / 2));
   }
   console.log('---');
@@ -593,26 +589,6 @@ console.log();
 //  123321 -> true
 //  123456 -> false
 console.group("29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra palindromas (taip pat skaitosi iš abiejų pusių)");
-// {
-//   function isPalyndrome(str) {
-//     let i = 0;
-//     let k = str.length - 1;
-//     while (i < k) {
-//       if (str[i] !== str[k]) return false;
-//       i++;
-//       k--;
-//     }
-//     return true;
-//   }
-  // console.log('---');
-  // console.log({
-  //   'mama': isPalyndrome('mama'),
-  //   'mamam': isPalyndrome('mamam'),
-  //   '123321': isPalyndrome('123321'),
-  //   '123456': isPalyndrome('123456'),
-  // })
-  // console.log('---');
-// }
 {
 
   function isPalyndrome(str) {
