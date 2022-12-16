@@ -175,8 +175,8 @@ console.groupCollapsed('https://edabit.com/challenge/ifDM26p25bqS8EsFu');
 const alice = new Player({name: "Alice", hp: 110, en: 50, armor: 10});
 const bob = new Player({name: "Bob", hp: 100, en: 60, armor: 20});
 
-console.log(alice)
-console.log(bob)
+console.log(alice);
+console.log(bob);
 
 alice.learnSkill('fireball',{
   damage: 23,
@@ -194,20 +194,21 @@ bob.learnSkill('superbeam',{
   heal:50,
   cost:75,
   desc: "an overpowered attack, pls nerf"
-})
+});
 
 console.log(bob.superbeam(alice));
 
-console.log("\n----\nBut wait! Bob's back in action!")
-bob.learnSkill('Strike',{
+console.log("\n----\nBut wait! Bob's back in action!");
+
+bob.learnSkill('Meteor Strike',{
 	damage:118,
   penetration:4,
   heal:5,
   cost:20,
   desc: "an attack that basically ends the game (gg)"
-})
+});
 
-console.log(bob.Strike(alice));
+console.log(bob['Meteor Strike'](alice));
 
 }
 console.groupEnd();
